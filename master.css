@@ -1,0 +1,481 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #000; 
+    scroll-behavior: smooth;
+    font-family: 'Pretendard';
+    letter-spacing: -0.01em;
+    overflow-x: hidden; /* 가로 스크롤바 제거 */
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* 옵저버 스타일 변경 */
+  /* 초기 상태 */
+  .hidden {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+
+  /* 화면에 보이는 상태 */
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+/* 초기 상태 */
+  .hidden2 {
+    opacity: 0;
+  }
+
+  /* 화면에 보이는 상태 */
+  .visible2 {
+    opacity: 1;
+  }
+
+
+/* 메뉴바 */
+.menubar{
+    width: 100%;
+    height: 63px;
+    display: flex;
+    position: fixed;
+    background-color: #ffffff96;
+    top: 0;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 0 40px 0 40px;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.logo{
+    width: 91px;
+    object-fit: contain;
+}
+.m_s{
+    width: 73px;
+    object-fit: contain;
+}
+
+
+/* 상단 메인 */
+.main{
+    width: 100%;
+    height: 1080px;
+    background-image: url(img/main_bg.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    animation: backgroundZoom 8s infinite;
+}
+@keyframes backgroundZoom {
+    0%, 100% {
+      background-size: 100%; /* 기본 크기 */
+      background-position: center 0%;
+    }
+    50% {
+      background-size: 110%; /* 확대 크기 */
+      background-position: center 14%;
+    }
+}
+.main_title{
+    width: 507px;
+    height: 199px;
+    margin-top: 185px;
+    transition: 1.5s ease;
+}
+.main_slide{
+    width: 100vw;
+    height: 646px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: 2s ease;
+}
+#main_slide_1{
+    height: 646px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    column-gap: 30px;
+    transition: 1s ease;
+}
+#main_img1,
+#main_img2,
+#main_img4,
+#main_img5{
+    width: 671px;
+    height: 382px;
+    background-color: #000;
+    border-radius: 20px;
+    box-shadow: 0px 2px 19px #00000047;
+    transition: 0.7s ease;
+    overflow: hidden;
+}
+#main_img3{
+    width: 1028px;
+    height: 586px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 19px #00000047;
+    transition: 0.7s ease;
+    overflow: hidden;
+}
+
+.s_sign{
+    width: 76px;
+    height: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+#s_sign1{
+    width: 14px;
+    height: 14px;
+    border-radius: 10px;
+    background-color: #000;
+}
+#s_sign2{
+    width: 14px;
+    height: 14px;
+    border-radius: 10px;
+    background-color: #5D40FF;
+}
+#s_sign3{
+    width: 14px;
+    height: 14px;
+    border-radius: 10px;
+    background-color: #000;
+}
+#bt_box{
+    width: 3600px;
+    height: 61px;
+    position: absolute;
+    margin-top: 687px;
+    display: flex;
+}
+#bt_b1{
+    width: 1200px;
+    height: 61px;
+    display: flex;
+    justify-content: space-between;
+    visibility: hidden;
+}
+#bt_b2{
+    width: 1200px;
+    height: 61px;
+    display: flex;
+    justify-content: space-between;
+}
+#bt_b3{
+    width: 1200px;
+    height: 61px;
+    display: flex;
+    justify-content: space-between;
+    visibility: hidden;
+}
+#bt_left1,
+#bt_left2,
+#bt_left3,
+#bt_right1,
+#bt_right2,
+#bt_right3{
+    cursor: pointer;
+}
+.main_img_a{
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+#bt_left1{
+    visibility: hidden;
+}
+#bt_right3{
+    visibility: hidden;
+}
+
+
+/* 컨텐츠 1 */
+.con1{
+    width: 100%;
+    height: 874px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con1_1{
+    width: 1448px;
+    height: 654px;
+    display: flex;
+    justify-content: space-between;
+}
+.c1_1{
+    display: flex;
+    flex-direction: column;
+}
+.c1_title{
+    width: 300px;
+    height: 68px;
+}
+.c1_bt{
+    margin-top: 30px;
+    row-gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+#c1_bt_1,
+#c1_bt_2,
+#c1_bt_3,
+#c1_bt_4,
+#c1_bt_5,
+#c1_bt_6 {
+    padding: 11px 18px 11px 18px;
+    background-color: #E5F4FF;
+    border-radius: 30px;
+    color: #000;
+    font-size: 22px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+#c1_bt_1{
+    width: 155px;
+}
+#c1_bt_2{
+    width: 191px;
+}
+#c1_bt_3{
+    width: 134px;
+}
+#c1_bt_4{
+    width: 146px;
+}
+#c1_bt_5{
+    width: 159px;
+}
+#c1_bt_6{
+    width: 162px;
+}
+
+.c1_2{
+    width: 1077px;
+    display: flex;
+    row-gap: 38px;
+    flex-direction: column;
+}
+.c1_2_1{
+    display: flex;
+    justify-content: space-between;
+}
+#c1_img_c1,
+#c1_img_c2,
+#c1_img_c3,
+#c1_img_c4,
+#c1_img_c5,
+#c1_img_c6{
+    width: 347px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    cursor: pointer;
+    transition: 1s ease;
+}
+#c1_img_c2,
+#c1_img_c5{
+    transition-delay: 0.1s;
+}
+#c1_img_c3,
+#c1_img_c6{
+    transition-delay: 0.2s;
+}
+.c1_img1{
+    width: 100%;
+    object-fit: contain;
+    filter: brightness(0.6);
+    transition: 0.4s;
+}
+.c1_img2{
+    width: 100%;
+    object-fit: contain;
+}
+
+#c1_img_c1:hover > .c1_img1{
+    filter: brightness(1);
+}
+#c1_img_c2:hover > .c1_img1{
+    filter: brightness(1);
+}
+#c1_img_c3:hover > .c1_img1{
+    filter: brightness(1);
+}
+#c1_img_c4:hover > .c1_img1{
+    filter: brightness(1);
+}
+#c1_img_c5:hover > .c1_img1{
+    filter: brightness(1);
+}
+#c1_img_c6:hover > .c1_img1{
+    filter: brightness(1);
+}
+
+
+/* 컨텐츠 2 */
+.con2{
+    width: 100%;
+    height: 783px;
+    background-color: #F0F1FB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con2_1{
+    width: 1448px;
+    height: 583px;
+}
+.c2_title{
+    width: 147px;
+    height: 68px;
+}
+.news_c{
+    width: 1448px;
+    height: 480px;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+.news_c_1{
+    width: 796px;
+    height: 480px;
+    border-radius: 17px;
+    overflow: hidden;
+}
+#news_img_c{
+    width: 796;
+    height: 1920px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.7s ease;
+}
+.news_img{
+    width: 100%;
+    object-fit: contain;
+}
+.news_c_2{
+    width: 620px;
+    height: 480px;
+    border-bottom: 1px solid #707070;
+}
+#news_text_c1,
+#news_text_c2,
+#news_text_c3,
+#news_text_c4{
+    width: 620px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #707070;
+    transition: 0.4s ease;
+}
+#news_text1,
+#news_text2,
+#news_text3,
+#news_text4{
+    width: 602px;
+    height: 80px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.news_c_1{
+    width: 796px;
+    height: 480px;
+    border-radius: 17px;
+    overflow: hidden;
+}
+
+/* 컨텐츠 3 */
+.con3{
+    width: 100%;
+    height: 524px;
+    background-color: #F9F8F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con3_1{
+    width: 1448px;
+    height: 295px;
+}
+.c3_title{
+    width: 148px;
+    height: 68px;
+}
+.con3_1_1{
+    width: 1448px;
+    height: 209px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+.con3_img1{
+    width: 715px;
+    height: 209px;
+    cursor: pointer;
+    transition: 0.8s ease;
+}
+
+
+/* 푸터 */
+footer{
+    width: 100%;
+    height: 372px;
+    background-color: #F9F8F9;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.f_1{
+    width: 98px;
+    height: 38px;
+    display: flex;
+    align-items: end;
+    left: 236px;
+    position: absolute;
+}
+.f_img_1{
+    width: 100%;
+    object-fit: contain;
+}
+.f_2{
+    width: 100%;
+    background-color: #787778;
+    margin-top: 38px;
+    display: flex;
+    justify-content: space-between;
+    padding: 61px 236px 0 236px;
+}
+.f_2_1{
+    width: 409px;
+    height: 187px;
+}
+.f_2_2{
+    width: 583px;
+    height: 187px;
+}
